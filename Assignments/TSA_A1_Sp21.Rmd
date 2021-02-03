@@ -1,10 +1,12 @@
 ---
 title: "ENV 790.30 - Time Series Analysis for Energy Data | Spring 2021"
 subtitle: "Assignment 1 - Due date 01/27/21"
-author: "Student Name"
+author: "Nick Valby"
 output: pdf_document
 geometry: margin=2.54cm
 ---
+
+
 
 ## Directions
 
@@ -15,16 +17,18 @@ Then you will start working through the assignment by  **creating code and outpu
 
 When you have completed the assignment, **Knit** the text and code into a single PDF file. Rename the pdf file such that it includes your first and last name (e.g., "LuanaLima_TSA_A01_Sp21.Rmd"). Submit this pdf using Sakai. 
 
+> library(latexpdf)
+
 ## Questions
 
 Q1. What are your previous experiences with time series analysis, R, and Git? 
 
-> Answer: 
+> Answer: I used R and R Studio a little bit in Duke's "Intro to Probability with R Studio"  through Coursera last summer. This is my first time using Git, and I like the concept. 
 
 
 Q2. Provide a link below to your forked course repository in GitHub. Make sure you have pulled all recent changes from the course repository and that you have updated your course README file as instructed on the recorded video "Getting started with Git and Github". 
 
-> Answer: 
+> Answer: https://github.com/nvalby/ENV790_30_TSA_S2021
 
 
 Q3. For this part we just want to see the path to your R project. No need to do anything. The output will be automatically generated once you knit you file. 
