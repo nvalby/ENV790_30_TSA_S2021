@@ -7,4 +7,4 @@ Instructor: Luana Lima
 
 TA: Zoe Yang
 
-Student: Nick Valby
+Student: Nick Valby is cloning his git hub repository on a new machine (2.11.21)
