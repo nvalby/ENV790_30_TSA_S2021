@@ -22,10 +22,19 @@ R packages needed for this assignment:"forecast","tseries", and "dplyr". Install
 ```{r}
 #Load/install required package here
 
-install.packages("forecast")
-install.packages("tseries")
-install.packages("dplyr")
+#install.packages("forecast")
+#install.packages("tseries")
+#install.packages("dplyr")
+#install.packages("lubridate")
+#install.packages("readxl")
 
+
+#Load packages
+library("forecast")
+library("tseries")
+library("dplyr")
+library("lubridate")
+library("readxl")
 
 ```
 
@@ -37,9 +46,13 @@ Consider the data provided in the spreadsheet "Table_10.1_Renewable_Energy_Produ
 ```{r}
 #Importing data set
 
-library(utils)
+energy_data <- read_excel("../Data/Table_10.1_Renewable_Energy_Production_and_Consumption_by_Source.xlsx", col_names = FALSE, sheet = "Monthly Data", skip = 12) 
 
-read.xls()
+energy_data_names <- read_excel("../Data/Table_10.1_Renewable_Energy_Production_and_Consumption_by_Source.xlsx", col_names = FALSE, sheet = "Monthly Data", skip = 10, n_max = 1)
+
+colnames(energy_data) <- energy_data_names
+
+head(energy_data)
 
 ```
 
@@ -47,8 +60,27 @@ read.xls()
 ## Question 1
 You will work only with the following columns: Total Biomass Energy Production, Total Renewable Energy Production, Hydroelectric Power Consumption. Create a data frame structure with these three time series only. Use the command head() to verify your data.
 
+```{r}
+
+head(energy_data)
+
+energy_data <- select(energy_data, "Month", "Total Biomass Energy Production", "Total Renewable Energy Production", "Hydroelectric Power Consumption")
+
+head(energy_data)
+
+```
+
+
+
 ## Question 2
 Transform your data frame in a time series object and specify the starting point and frequency of the time series using the function ts().
+
+```{r}
+ts_energy_data <- ts(energy_data[,2:4],frequency = 12, start = 1973)
+
+head(ts_energy_data)
+```
+
 
 ## Question 3
 Compute mean and standard deviation for these three series.
