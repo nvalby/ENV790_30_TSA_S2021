@@ -1,7 +1,7 @@
 ---
 title: "Intro to Data Frames in R"
-author: "Luana Lima"
-date: "1/27/2021"
+author: "Nick Valby"
+date: "2/21/2021"
 output: pdf_document
 ---
 
@@ -37,8 +37,10 @@ cars$speed
 How would you store it on another object?
 
 ```{r}
+#car_speed <- cars$speed
+
 car_speed <- cars$speed
-car_speed
+
 ```
 
 
@@ -96,6 +98,9 @@ How would you create a data frame?
 #useful function data.frame()
 create_df <- data.frame("speed"=car_speed,"dist"=car_dist)
 create_df
+```
+
+```{r}
 ```
 
 

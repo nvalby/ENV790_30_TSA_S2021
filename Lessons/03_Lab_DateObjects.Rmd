@@ -1,7 +1,7 @@
 ---
 title: "TSA - Sp21 - Date Objects"
-author: "Luana Lima"
-date: "2/3/2021"
+author: "Nick Valby"
+date: "2/22/2021"
 output: pdf_document
 ---
 
@@ -32,8 +32,8 @@ Formatting of dates in R:
 today <- Sys.Date()
 format(today, format = "%B")
 format(today, format = "%y")
-#format(today, format = "")
-#format(today, format = "")
+format(today, format = "%Y")
+format(today, format = "%m")
 
 #as.Date()
 ```
@@ -50,7 +50,7 @@ Install and load the package lubridate into your R session. Lubridate offers fas
 library(lubridate)
 
 #Ex1
-str_today <- "2021-feb-3"
+str_today <- "2021-feb-22"
 #Since the format is year-month-day we will use function ymd()
 date_obj_today <- ymd(str_today)
 date_obj_today
